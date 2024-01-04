@@ -7,3 +7,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+/* Text With Gradient */
+h5 {
+  background: -webkit-linear-gradient(#000, #444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
