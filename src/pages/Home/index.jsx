@@ -1,11 +1,14 @@
 import React from 'react'
 import { Primary } from '../../components/Button'
 import landing1 from "../../public/svg/landing1.svg"
+import {useTranslation} from "react-i18next";
 
 const Home = () => {
+	const {t} = useTranslation()
+	console.log(t)
 	return (
 		
-		<div className='w-full lg:mt-20'>
+		<div className='w-full lg:mt-20 h-[100vh]'>
 			{/********************************** LANDING **********************************/}
 			<div className='w-full flex md:block flex-col relative items-center'>
 				<img alt='' src={landing1} className='md:absolute right-0  md:translate-x-[20%] w-[500px] lg:w-[700px] xl:w-[1000px]' />
@@ -17,7 +20,7 @@ const Home = () => {
 						The revolutionary solution designed to bring a harmonious and seamless experience to your HR processes.
 					</p>
 					<span className='w-fit mx-auto md:mx-0'>
-						<Primary>Request a Demo</Primary>
+						<Primary>{t("LANDING.REQUEST_A_DEMO")}</Primary>
 					</span>
 				</div>
 			</div>
