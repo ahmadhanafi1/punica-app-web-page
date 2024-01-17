@@ -10,8 +10,13 @@
 
 
 /* Text With Gradient */
-h5 {
-  background: -webkit-linear-gradient(#000, #444);
+.title-gradient {
+  background: -webkit-linear-gradient(#000, #777);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.title-gradient-big {
+  background: -webkit-linear-gradient(#000, #aaa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
