@@ -14,7 +14,7 @@ const Home = () => {
 		
 		<div className='w-full lg:mt-20 xl:mb-[10rem] overflow-x-clip overflow-y-visible '>
 			{/********************************** LANDING **********************************/}
-			<div className='w-[95%] max-w-[1400px]  flex items-center mx-auto relative '>
+			<div className='w-[95%] max-w-[1400px] flex items-center mx-auto relative '>
 
 				<div className='w-1/2 flex flex-col gap-16 mt-16 pb-16 md:pb-32 sm:pl-20'>
 					<h5 className='title-gradient w-full lg:w-[500px] leading-[1.15] text-[1.3rem] md:text-[1.6rem] lg:text-[3rem] xl:text-6xl font-semibold pb-1 transition-all duration-300'>
@@ -44,7 +44,7 @@ const Home = () => {
 					<div className='w-full relative h-80'>
 						{[0, 1, 2].map((entry, index) => (<>
 							<div key={index} className={`w-full flex justify-center absolute transition-all duration-500 px-5 pb-10
-							 ${index > curIndex ? "translate-x-[100%] opacity-0" : index < curIndex ? "translate-x-[-100%] opacity-0" : 0}`} >
+							 ${index > curIndex ? "translate-x-[100%] opacity-0" : index < curIndex ? "translate-x-[-100%] opacity-0" : ""}`} >
 							<div className='w-full flex flex-col md:flex-row gap-9 lg:gap-20 md:w-[80%]'>
 								<div className='bg-red-500 w-full md:w-2/3 pt-[50%]  xl:pt-[40%] rounded-lg'></div>
 									<div className='flex flex-col  items-center text-center md:items-start md:text-left md:w-[40%]'>
@@ -63,9 +63,9 @@ const Home = () => {
 			<h5 className=' title-gradient-big leading-[1.15] text-[1.8rem] lg:text-[3rem] font-semibold pb-1 transition-all duration-300  text-center mb-14 px-5'>
 					The Unity in Our Diversity
 			</h5>
-				<div className='w-full max-w-[1400px] flex flex-col md:flex-row  h-[19rem] overflow-y-visible'>
+				<div className='w-full max-w-[1400px] flex flex-col md:flex-row mb-20 h-[19rem] overflow-y-visible'>
 					<div className='w-[100%] lg:w-[2000px] lg:h-[400px] my-10 mx-auto -translate-x-[20%]'><img alt='' src={process.env.PUBLIC_URL + "/images/laptop.png"} className='w-full h-full' /></div>
-					<div className='w-full flex flex-col items-end translate-x-2'>
+					<div className='w-full flex flex-col items-end translate-x-2 '>
 						{
 							[0, 1, 2, 3, 4, 5, 6, 7].map((entry, index) => (
 							<div className={`w-[95%] flex flex-col ${curIndex2 === index? "bg-[#8d0000]": "bg-[#ccc]"} my-1 p-2 transition-all duration-300 `} onClick={()=> setCurIndex2(index)}>

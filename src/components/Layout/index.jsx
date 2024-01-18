@@ -12,9 +12,9 @@ const Layout = () => {
 		<main className=''>
 			<Outlet />
 		</main>
-		<footer className='mt-auto'>
+		{/* <footer className='mt-auto'>
 			<Footer />
-		</footer>
+		</footer> */}
 	</body>
 	)
 }

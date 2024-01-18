@@ -20,3 +20,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.gradient {
+background: linear-gradient(#F3F5F7, #FFFAFA)
+}

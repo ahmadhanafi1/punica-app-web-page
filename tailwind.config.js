@@ -9,7 +9,7 @@ module.exports = {
     colors: {
       ...colors,
       background: "#BEBAAECC",
-      gray: "#474747",
+      paragText: "#474747",
       primary: "#8D0000",
       primaryLight: "#FDE3E3",
       Text: "#D9D9D9",
