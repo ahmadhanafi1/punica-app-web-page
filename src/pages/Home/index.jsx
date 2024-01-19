@@ -12,11 +12,11 @@ const Home = () => {
 
 	return (
 		
-		<div className='w-full lg:mt-20 xl:mb-[10rem] overflow-x-clip overflow-y-visible '>
+		<>
 			{/********************************** LANDING **********************************/}
 			<div className='w-[95%] max-w-[1400px] flex items-center mx-auto relative '>
 
-				<div className='w-1/2 flex flex-col gap-16 mt-16 pb-16 md:pb-32 sm:pl-20'>
+				<div className='w-1/2 flex flex-col gap-16 mt-16 pb-16 md:pb-32 sm:pl-15'>
 					<h5 className='title-gradient w-full lg:w-[500px] leading-[1.15] text-[1.3rem] md:text-[1.6rem] lg:text-[3rem] xl:text-6xl font-semibold pb-1 transition-all duration-300'>
 						Manage Your Workforce with Fruitful Harmony
 					</h5>
@@ -81,7 +81,7 @@ const Home = () => {
 				</div>
 			</div>
 			{/* ----------------------------------------------------------------------------------------- */}
-		</div>
+		</>
 	)
 }
 

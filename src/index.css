@@ -24,3 +24,40 @@
 .gradient {
 background: linear-gradient(#F3F5F7, #FFFAFA)
 }
+
+.pricing-gradient {
+  background: linear-gradient(#F3F5F7, #FFFEFE);
+}
+
+.pricing-shadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.price-text-gradient{
+  background: -webkit-linear-gradient(#AE1F23, #B97274);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*************************** Handling the scrollbar ***************************/
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+position: relative;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

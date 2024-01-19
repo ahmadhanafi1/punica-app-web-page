@@ -5,11 +5,11 @@ import { useTranslation } from 'react-i18next'
 const Features = () => {
 	const { t } = useTranslation() 
 	return (
-		<div className='w-full lg:mt-20 xl:mb-[10rem] overflow-x-clip overflow-y-visible '>
+		<>
 			{/********************************** LANDING **********************************/}
 			<div className='w-[95%] max-w-[1400px] flex items-center mx-auto relative '>
 
-				<div className='w-1/2 flex flex-col gap-16 mt-16 pb-16 md:pb-32 sm:pl-20'>
+				<div className='w-1/2 flex flex-col gap-16 mt-16 pb-16 md:pb-32 sm:pl-15'>
 					<h5 className='title-gradient w-full lg:w-[500px] leading-[1.15] text-[1.3rem] md:text-[1.6rem] lg:text-[3rem] xl:text-6xl font-semibold pb-1 transition-all duration-300'>
 						Features Lorem Ipsum Dolor
 					</h5>
@@ -21,7 +21,7 @@ const Features = () => {
 					</span>
 				</div>
 				<div className='absolute right-0 top-[10%] md:top-0 l w-[600px] md:w-[700px] lg:w-[900px] 2xl:w-[1000px] translate-x-[67%] xs:translate-x-[60%] md:translate-x-[50%] lg:translate-x-[48%] xl:translate-x-[40%] 2xl:translate-x-[25%]'>
-					<img alt='' src={process.env.PUBLIC_URL + "/images/landing1.png"} className='  w-full h-full  z-[-10]' />
+					<img alt='' src={process.env.PUBLIC_URL + "/images/landing1.png"} className='  w-full h-full z-[-10]' />
 				</div>
 			</div>
 			{/* ---------------------------------------------------------------------------------------------- */}
@@ -84,7 +84,7 @@ const Features = () => {
 					</span>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 

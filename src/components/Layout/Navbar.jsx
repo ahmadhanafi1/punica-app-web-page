@@ -12,8 +12,8 @@ const Navbar = () => {
 				<div className=' gap-4 lg:gap-12 flex-wrap hidden md:flex'>
 					<NavLink to={'/'} className='text-[#474747] hover:text-[#999999] w-fit lg:text-[1.2rem] transition-all duration-300 truncate'>Home</NavLink>
 					<NavLink to={'/'} className='text-[#474747] hover:text-[#999999] w-fit lg:text-[1.2rem] transition-all duration-300 truncate'>Products</NavLink>
+					<NavLink to={'/pricing'} className='text-[#474747] hover:text-[#999999] w-fit lg:text-[1.2rem] transition-all duration-300 truncate'>Pricing</NavLink>
 					<NavLink to={'/features'} className='text-[#474747] hover:text-[#999999] w-fit lg:text-[1.2rem] transition-all duration-300 truncate'>Features</NavLink>
-					<NavLink to={'/'} className='text-[#474747] hover:text-[#999999] w-fit lg:text-[1.2rem] transition-all duration-300 truncate'>Products</NavLink>
 					<NavLink to={'/'} className='text-[#474747] hover:text-[#999999] w-fit lg:text-[1.2rem] transition-all duration-300 truncate'>Products</NavLink>
 				</div>
 				<Primary> Request a Demo</Primary>

@@ -9,7 +9,7 @@ const Layout = () => {
 		<header>
 			<Navbar />
 		</header>
-		<main className=''>
+		<main className='w-full lg:mt-20 xl:mb-[10rem] overflow-x-clip overflow-y-visible '>
 			<Outlet />
 		</main>
 		{/* <footer className='mt-auto'>
