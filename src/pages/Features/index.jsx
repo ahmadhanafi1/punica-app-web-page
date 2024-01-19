@@ -20,11 +20,13 @@ const Features = () => {
 						<Primary>{t("LANDING.REQUEST_A_DEMO")}</Primary>
 					</span>
 				</div>
-				<div className='absolute right-0 top-[10%] md:top-0 l w-[600px] md:w-[700px] lg:w-[900px] 2xl:w-[1000px] translate-x-[67%] xs:translate-x-[60%] md:translate-x-[50%] lg:translate-x-[48%] xl:translate-x-[40%] 2xl:translate-x-[25%]'><img alt='' src={ process.env.PUBLIC_URL + "/images/landing1.png"} className='  w-full h-full  z-[-10]' /></div>
+				<div className='absolute right-0 top-[10%] md:top-0 l w-[600px] md:w-[700px] lg:w-[900px] 2xl:w-[1000px] translate-x-[67%] xs:translate-x-[60%] md:translate-x-[50%] lg:translate-x-[48%] xl:translate-x-[40%] 2xl:translate-x-[25%]'>
+					<img alt='' src={process.env.PUBLIC_URL + "/images/landing1.png"} className='  w-full h-full  z-[-10]' />
+				</div>
 			</div>
 			{/* ---------------------------------------------------------------------------------------------- */}
-			<div id='our-products' className='w-full flex flex-col items-center lg:my-[6rem] max-w-[1400px] mx-auto'> 
-			<div className='w-full flex justify-center mt-[10rem]'>
+			<div id='our-products' className='w-full flex flex-col items-center  max-w-[1400px] mx-auto mt-[5rem] lg:mt-[10rem]'> 
+			<div className='w-full flex justify-center '>
 					<div className='w-full relative h-80'>
 					<div  className={`w-full flex justify-center absolute transition-all duration-500 px-5 pb-10`} >
 							<div className='w-full flex flex-col md:flex-row gap-9 lg:gap-20 md:w-[80%]'>
@@ -39,7 +41,7 @@ const Features = () => {
 				</div>
 			</div>
 			{/* ------------------------------------------------------------------------------------------------------ */}
-			<div  className='w-full flex flex-col items-center my-[6rem] max-w-[1400px] mx-auto mt-[15rem]'> 
+			<div  className='w-full flex flex-col items-center my-[6rem] max-w-[1400px] mx-auto mt-[12rem]'> 
 				<h5 className=' title-gradient-big leading-[1.15] text-[1.8rem] lg:text-[3rem] font-semibold pb-1 transition-all duration-300 text-center mb-5'>
 							The Unity in Our Diversity
 				</h5>
@@ -67,8 +69,20 @@ const Features = () => {
 				</div>
 			</div>
 {/* ------------------------------------------------------------------------------------------------------------------------------------------ */}
-			<div className='w-full flex flex-col items-center my-[6rem] max-w-[1400px] mx-auto mt-[15rem]'>
-				
+			<div className='w-full flex flex-col md:flex-row items-center mb-[6rem] max-w-[1400px] mx-auto mt-[7rem] lg:mt-[8rem] px-5'>
+				<img alt='' src={process.env.PUBLIC_URL + "/images/landing2.png"}
+					className='w-full md:w-1/2 p-5' />
+				<div className='w-full md:w-1/2 flex flex-col gap-16 mt-16 pb-16 md:pb-32 md:pl-20 text-center md:text-left items-center md:items-start'>
+					<h5 className='title-gradient w-full lg:w-[500px] leading-[1.15] text-[1.6rem] lg:text-[3rem] xl:text-6xl font-semibold pb-1 transition-all duration-300'>
+						Features Lorem Ipsum Dolor
+					</h5>
+					<p className='text-[#474747] w-full lg:w-[500px] text-[.9rem] xl:text-[1.1rem]'>
+						The revolutionary solution designed to bring a harmonious and seamless experience to your HR processes.
+					</p>
+					<span className='w-fit lg:mx-0 text-[.7rem] hidden md:block'>
+						<Primary>{t("LANDING.REQUEST_A_DEMO")}</Primary>
+					</span>
+				</div>
 			</div>
 		</div>
 	)
