@@ -1,11 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Secondary } from '../Button'
 
 const Footer = () => {
 	return (
-		<div className='w-full h-[20rem]  px-28'>
-			<div className='w-full flex justify-between'>
-				<div className='flex gap-[4rem]'>
+		<div className='w-full max-w-[1400px] mx-auto lg:px-28'>
+			<div className='w-[95%] mx-auto p-5 mb-5 flex justify-between bg-primary rounded-lg items-center'>
+				<p className='lg:text-xl text-white'>Kickstart Your Career Today</p>
+				<Secondary >Try Demo</Secondary>
+			</div>
+			<div className='w-full items-center flex justify-between flex-col'>
+				<div className='flex gap-5 lg:gap-[4rem]'>
 					<div className=''>
 						<h1 className='font-[500] mb-3'>About</h1>
 						<div className='flex flex-col gap-3'> 
@@ -47,7 +52,7 @@ const Footer = () => {
 						</div>
 					</div>
 				</div>
-				<div className='mt-10 flex flex-col gap-5'>
+				<div className='mt-10 flex lg:flex-col gap-5'>
 					<Link className='flex justify-between items-center'>
 						<span className='text-[#474747]'>punicaapp</span>
 					</Link>

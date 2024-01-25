@@ -27,10 +27,18 @@ background: linear-gradient(#F3F5F7, #FFFAFA)
 
 .pricing-gradient {
   background: linear-gradient(#F3F5F7, #FFFEFE);
+  @media screen and (max-width: 750px) {
+    background: #fff;
+    
+  }
 }
 
 .pricing-shadow {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.most-popular-shadow {
+  box-shadow: 1px 3px 7px #fd9090;
 }
 
 .price-text-gradient{

@@ -12,9 +12,9 @@ const Layout = () => {
 		<main className='w-full lg:mt-20 xl:mb-[10rem] overflow-x-clip overflow-y-visible '>
 			<Outlet />
 		</main>
-		{/* <footer className='mt-auto'>
+		<footer className='mt-auto'>
 			<Footer />
-		</footer> */}
+		</footer>
 	</body>
 	)
 }

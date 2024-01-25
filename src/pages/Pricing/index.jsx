@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Primary } from '../../components/Button'
+import { Primary, Secondary } from '../../components/Button'
 import { useTranslation } from 'react-i18next'
 import x from "../../public/svg/x.svg"
 import tick from "../../public/svg/tixk.svg"
@@ -49,7 +49,7 @@ const Pricing = () => {
 			{/* switch over */}
 			{/* prices */}
 			<div className='w-[80%] flex gap-0 mb-[10rem]'>
-				<div className='w-1/3 text-[#333333] pricing-gradient h-[25rem] flex flex-col p-5 pt-[3rem] items-center pr-14 '>
+				<div className='w-1/3 text-[#333333] pricing-gradient h-[25rem] hidden md:flex flex-col p-5 pt-[3rem] items-center pr-14 '>
 						<h1 className='title-gradient-big text-[2.5rem] font-[500]'>Essential</h1>
 						<p className=''>
 							EURO €
@@ -65,7 +65,8 @@ const Pricing = () => {
 							<li>ed pulvinar eros pharetra orci euismod, non pellentesque nisi mattis.</li>
 						</div>
 				</div>
-				<div className='flex flex-col items-center w-1/3 pricing-gradient pt-[2.5rem] pricing-shadow border z-50 scale-[1.15]'>
+				<div className='relative flex flex-col items-center w-full md:w-1/3 pricing-gradient pt-[2.5rem] pricing-shadow border z-50 scale-[1.15] rounded-md md:rounded-[0]'>
+				<div className='w-1/2 rounded-3xl absolute top-[-5.5%] bg-primary text-white py-3 text-center most-popular-shadow'>Most Popular</div>
 				<h1 className='title-gradient-big text-[2.5rem] font-[500]'>Essential</h1>
 						<p className=''>
 							EURO €
@@ -81,7 +82,7 @@ const Pricing = () => {
 							<li>ed pulvinar eros pharetra orci euismod, non pellentesque nisi mattis.</li>
 						</div>
 				</div>
-				<div className='w-1/3 text-[#333333] pricing-gradient flex flex-col  py-[3rem] items-center pl-14 pr-5 '>
+				<div className='w-1/3 text-[#333333] pricing-gradient hidden md:flex flex-col  py-[3rem] items-center pl-14 pr-5 '>
 						<h1 className='title-gradient-big text-[2.5rem] font-[500]'>Essential</h1>
 						<p className=''>
 							EURO €
@@ -102,16 +103,16 @@ const Pricing = () => {
 				</div>
 				{/* Pricing finished */}
 			</div>
-			<div className='w-[95%] max-w-[1400px] flex flex-col items-center mx-auto'>
-				<h5 className=' title-gradient-big leading-[1.15] text-[1.8rem] lg:text-[3rem] font-semibold pb-1 transition-all duration-300 text-center mb-5'>
+			<div className='w-[95%] max-w-[1400px]  flex-col items-center mx-auto flex'>
+				<h5 className=' title-gradient-big leading-[1.15] text-[1.8rem] lg:text-[2.5rem] font-semibold pb-1 transition-all duration-300 text-center mb-5'>
 					Lorem Ipsum Dolor!
 				</h5>
-				<p className='text-[#474747] text-center text-[1.3rem] w-[75%]  mx-auto'> 
+				<p className='text-[#474747] text-center text-[.95rem] lg:text-[1.2rem] w-[75%]  mx-auto'> 
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 				</p>
 				<span className='my-[2.6rem]'><Primary >EXPLORE ALL FEATURES</Primary></span>
 
-				<div className='w-full bg-[#F3F5F7] border-2 border-primary rounded-lg mb-[10rem] pb-5'>
+				<div className='w-full bg-[#F3F5F7] border-2 border-primary rounded-lg mb-[10rem] pb-5 hidden md:block '>
 					<div className='bg-primary  m-5 flex text-white rounded-lg font-[600]'>
 						<span className='w-[30%] py-3 pl-6'>FEATURE</span>
 						<div className='flex w-[70%] justify-center items-center text-center'>
@@ -120,24 +121,24 @@ const Pricing = () => {
 							<span className='w-1/3 py-3'>PREMIUM</span>
 						</div>
 					</div>
-					<div className='mx-5 mb-1 flex rounded-lg '>
+					<div className='mx-5 mb-1 rounded-lg flex '>
 							<span className='w-[30%] py-3 pl-6'>Price</span>
 							<div className='flex w-[70%] justify-center items-center text-center'>
-							<span className='w-1/3 py-3'><p className='text-sm'>
+							<span className='w-1/3 py-3'><p className='text-[.75rem] lg:text-sm'>
 								EURO €
-								<span className='price-text-gradient text-[1.4rem] font-[500] px-3'>3.99</span>
+								<span className='price-text-gradient text-[1.5rem] font-[500] px-2 lg:px-3'>3.99</span>
 								/month
 							</p>
 							</span>
-							<span className='w-1/3 py-3'><p className='text-sm'>
+							<span className='w-1/3 py-3'><p className='text-[.75rem] lg:text-sm'>
 								EURO €
-								<span className='price-text-gradient text-[1.4rem] font-[500] px-3'>3.99</span>
+								<span className='price-text-gradient text-[1.5rem] font-[500] px-2 lg:px-3'>3.99</span>
 								/month
 							</p>
 							</span>
-							<span className='w-1/3 py-3'><p className='text-sm'>
+							<span className='w-1/3 py-3'><p className='text-[.75rem] lg:text-sm'>
 								EURO €
-								<span className='price-text-gradient text-[1.4rem] font-[500] px-3'>3.99</span>
+								<span className='price-text-gradient text-[1.5rem] font-[500] px-2 lg:px-3'>3.99</span>
 								/month
 							</p>
 							</span>
@@ -156,6 +157,20 @@ const Pricing = () => {
 					</div>
 					))}
 				</div>
+			</div>
+			{/* Table finished */}
+			<div className='w-[95%] max-w-[1400px] flex flex-col md:flex-row justify-center mx-auto gap-16'>
+					<img src={process.env.PUBLIC_URL + 'images/landing3.png'} alt="" className='w-full md:w-1/2 ' />
+					<div>
+						<h1
+							className='title-gradient text-center md:text-left text-[1.8rem] lg:text-[2.5rem] font-[500] mb-7'>
+							Create Personal Package
+						</h1>
+						<p className='text-paragText text-center md:text-left text-[.95rem] lg:text-[1.2rem] md:max-w-[25rem]'>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices accumsan elit nec pretium. Phasellus feugiat commodo enim sed viverra.
+						</p>
+						<div className='mx-auto'><Secondary size='small'>Start Adding Features</Secondary></div> 
+					</div>
 			</div>
 		</div>
 		</>

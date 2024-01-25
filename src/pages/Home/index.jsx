@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Primary } from '../../components/Button'
-// import landing1 from "../../public/svg/landing1.svg"
-import laptop from "../../public/svg/laptop.svg"
+
 import {useTranslation} from "react-i18next";
 
 const Home = () => {
