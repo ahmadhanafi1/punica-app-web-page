@@ -9,7 +9,7 @@ const Footer = () => {
 				<p className='lg:text-xl text-white'>Kickstart Your Career Today</p>
 				<Secondary >Try Demo</Secondary>
 			</div>
-			<div className='w-full items-center flex justify-between flex-col'>
+			<div className='w-full items-center flex justify-between flex-col lg:flex-row mt-10'>
 				<div className='flex gap-5 lg:gap-[4rem]'>
 					<div className=''>
 						<h1 className='font-[500] mb-3'>About</h1>
