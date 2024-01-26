@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {Primary} from '../Button'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import {MenuOutlined} from "@ant-design/icons"
 import { useTranslation } from 'react-i18next'
 

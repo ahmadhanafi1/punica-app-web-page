@@ -2,7 +2,6 @@
 import React, { Ref, forwardRef } from 'react'
 import { ConfigProvider, Select, Typography } from "antd";
 import { MultiselectType } from "./selectTypes";
-import { useSelector } from "react-redux";
 
 const MultipleSelect = forwardRef(({
     onChange,
@@ -50,6 +49,7 @@ const MultipleSelect = forwardRef(({
                     onDeselect={onDeselect}
                     onClear={onClear}
                     options={options}
+                    // @ts-ignore
                     defaultValue={defaultValue}
                     showSearch
                     disabled={disabled}

@@ -1,7 +1,6 @@
 //@ts-ignore
 import React from 'react';
 import {TimePicker, ConfigProvider, Typography} from 'antd';
-import {useSelector} from "react-redux";
 import {TimeInputType} from "./timeInputType";
 
 const TimeInput = ({
