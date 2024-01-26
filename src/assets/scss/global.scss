@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('./components/widget.scss');
+@import url('./components/dropdown.scss');
+@import url('./components/sidebar.scss');
+@import url('./components/navbar.scss');
+@import url('./components/grid.scss');
+@import url('./components/tooltip.scss');
+@import url('./components/swiper.scss');
+@import url('./components/notification.scss');
+@import url('./components/modal.scss');
+@import url('./components/calendar.scss');
+@import url('./components/profile.scss');
+@import url('./components/tabs.scss');
+@import url('./components/attendance.scss');
+
+body {
+  @apply overflow-x-hidden h-fit max-w-[100vw];
+}
+
+#dynamicDocumentInput .ck-content, #announcementInput .ck-content {
+  @apply h-full  min-w-[10rem] max-h-[none] #{'!important'};
+}
+
+#announcementInput .ck-content {
+  @apply min-h-[20rem] #{!important};
+}
+
+#dynamicDocumentInput .ck-editor, #announcementInput .ck-editor {
+  @apply w-full #{'!important'};
+}
+
+#dynamicDocumentInput .ck-editor-top, #announcementInput .ck-editor-top {
+  @apply w-full #{'!important'};
+}
+
+#dynamicDocumentInput .ck-editor-main, #announcementInput .ck-editor-main {
+  @apply h-fit w-full #{'!important'};
+}
+
+.dynamic-documents {
+  @apply flex flex-row flex-wrap w-full #{!important};
+  .shortcuts {
+    @apply border border-gray-300 rounded-xl h-fit flex flex-col gap-2 w-[50%];
+    &__items {
+      @apply flex flex-wrap gap-2 text-sm p-2;
+    }
+
+    &__item {
+      @apply flex gap-2 items-center justify-center hover:bg-gray-400 cursor-pointer transition bg-gray-200 px-3 py-2 shadow-sm rounded-lg flex-grow text-center whitespace-nowrap;
+    }
+  }
+}
+
+.swiper, .swiper-wrapper {
+  @apply z-0 #{!important};
+}
+
+.divider {
+  @apply w-[1px] h-full bg-gray-200 hidden md:block;
+}
+
+.evaluation--answer .MuiSlider-root {
+  color: #b20000 !important;
+}
+
+.appearacePreview {
+  width: 900px;
+  max-width: 100%;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 1fr;
+  grid-auto-flow: row dense;
+  grid-gap: 10px;
+  counter-reset: boxes;
+}
+
+.tall {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.wide {
+  grid-row: span 1;
+  grid-column: span 2;
+}
+
+.square {
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.ant-skeleton-image {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ant-skeleton.ant-skeleton-element{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.checkbox-select {
+  .ant-select-selection-overflow {
+    .ant-checkbox {
+      display: none !important;
+    }
+    .ant-select-open {
+      .ant-checkbox {
+        display : none !important;
+      }
+    }
+  }
+ body {
+   background: #000 !important;
+
+ }
+}
+
+.checkbox-select {
+  .select {
+    &:hover {border-color: var(--primaryColor)}
+  }
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: var(--primaryColor);
+    border-color: var(--primaryColor);
+  }
+}
+
+@layer utilities {
+    @variants responsive {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    }
+  }
+
+.whatsHappenning {
+
+  // __child {  
+    &::-webkit-scrollbar {
+      width: .17em !important;
+
+    }
+
+    &::-webkit-scrollbar {
+    border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      width: 20px !important;
+      background: rgb(121, 123, 135)
+    }
+  // }
+}
+
+
+
+.whatshappenning::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    width: 20px !important;
+}
+.ant-form-item-required {
+  display: unset !important;
+  &::before {
+    display: none !important;
+  }
+  &::after {
+    margin-inline-end: 4px;
+    color: #ff4d4f;
+    font-size: 14px;
+    visibility: visible !important;
+    font-family: SimSun,sans-serif;
+    line-height: 1;
+    content: "*" !important;
+  }
+}
+.anticon.anticon-close.ant-tour-close {
+  opacity: 0;
+  pointer-events: none;
+}
+.ant-picker-ok .ant-btn {
+  display: none;
+}
+
+
+.myTeamContainer.reorder {
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+}
+.myTeamContainer {
+flex-wrap: wrap;
+  overflow: hidden auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.myTeam__secondLayer {
+  padding-right: 15px !important;
+  padding-left: 10px !important;
+ .swiper-wrapper {
+  align-items: center;
+  width: fit-content !important;
+ }
+
+  .swiper-button-prev {left: -10% !important; }
+  .swiper-button-next {right: 0 !important; }
+  }
+
+.firstLayerImage {
+  flex: 0 0 80px;
+}
+
+.ck-editor__editable {
+  min-height: 500px !important;
+}
+
+#myTeamSmall {
+  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 13px;
+}
+
+.external-users-skeleton .ant-skeleton-input{
+  width: 100% !important;
+}
+
+.gridContainer-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr));
+  gap: 10px;
+  grid-auto-flow: dense;
+  & > div {height: 100% !important}
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% - 10px), 1fr));
+  }
+}
+
+.custom-filter-select-component .ant-form-item {
+  @apply mb-3 #{!important};
+}
+
+.ant-picker-time-panel-column {
+  overflow-y: scroll !important;
+}

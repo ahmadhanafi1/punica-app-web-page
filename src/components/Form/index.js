@@ -1,18 +1,21 @@
-import PasswordInput from './Input/PasswordInput';
-import TextInput from './Input/TextInput';
-import TextArea from './Input/TextArea';
-import NumberInput from './Input/NumberInput';
-import DateInput from './DateInput';
-import Checkbox from './Checkbox';
-import Radio from './Radio';
-import FileInput from './FileInput';
-import Switch from './Switch';
-import Slider from './Slider';
-import Color from './Input/Color';
-import TimeInput from './TimeInput';
-import { MultipleSelect, Select } from './Select';
-import { Form, Label, useForm, useWatch } from './Form';
-import RangePicker from "./RangePicker";
+import PasswordInput from './Input/PasswordInput.tsx';
+import TextInput from './Input/TextInput.tsx';
+import TextArea from './Input/TextArea.tsx';
+import NumberInput from './Input/NumberInput.tsx';
+import DateInput from './DateInput/index.tsx';
+import Checkbox from './Checkbox/index.tsx';
+import Radio from './Radio/index.tsx';
+import FileInput from './FileInput/index.tsx';
+import Switch from './Switch/index.tsx';
+import Slider from './Slider/index.tsx';
+import Color from './Input/Color.tsx';
+import TimeInput from './TimeInput/index.tsx';
+import Select from './Select/Select.tsx';
+import MultipleSelect from './Select/Multiple.tsx';
+import Form from './Form/Form.tsx';
+import  Label from './Form/Label.tsx';
+import {useForm,useWatch} from './Form/hook.js';
+import RangePicker from "./RangePicker/index.tsx";
 
 export {
   PasswordInput as Password,

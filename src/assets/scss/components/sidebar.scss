@@ -1,0 +1,71 @@
+.sidebar-container {
+  @apply min-h-[98vh] max-w-[280px] rounded-2xl w-full max-h-full;
+  background-color: var(--secondaryColor); 
+  transition: .5s ease-in-out;
+  margin: .5rem 0 .5rem .5rem;
+}
+
+.sidebar__toggle__button {
+  @apply fixed hidden bottom-10 left-0 transition ease-in-out z-[999] pl-5 py-3 pr-3 shadow-xl rounded-r-full bg-[#edeced];
+}
+
+.sidebar__toggle__button svg {
+  @apply rotate-180 transition duration-75 ease-in-out;
+  fill: var(--primary-icon-text-color);
+}
+
+.sidebar__toggle__button.active svg {
+  @apply rotate-0;
+}
+
+.sidebar__toggle__button.active {
+  @apply left-[-0.8rem];
+}
+
+
+.sidemenu-wrapper {
+  @apply sticky top-[150px] flex flex-col;
+}
+
+.overlay--notification {
+  @apply fixed w-full h-full bg-black bg-opacity-60 z-50 opacity-0 pointer-events-none transition duration-300  ease-linear;
+}
+.overlay--notification.active {
+  @apply opacity-100 pointer-events-auto  ;
+}
+
+
+
+@media (max-width: 1000px) {
+  .sidebar-container {
+    transition: all 1s cubic-bezier(0.858, 0.01, 0.068, 0.99) 0s;
+    @apply   fixed top-0 left-0 w-full h-full rounded-none z-[999] z-[995] overflow-y-auto max-w-none transform translate-x-[-100%] m-0;
+  }
+  .sidebar-logo-wrapper {
+    @apply flex items-center justify-center mb-6;
+  }
+  .sidebar__close__button {
+    @apply absolute bottom-5 block right-0 bg-gray-500 pr-10 pl-2 py-2 rounded-l-full text-white text-2xl font-bold cursor-pointer;
+  }
+  .sidebar__close__button svg {
+    @apply fill-white;
+  }
+  .overlay {
+    @apply fixed w-full h-full bg-black bg-opacity-60 z-[990] opacity-0 pointer-events-none transition duration-700 delay-200 ease-in-out;
+  }
+  .overlay.active {
+    @apply opacity-100;
+  }
+  .sidebar__toggle__button {
+    @apply block;
+  }
+}
+
+.sidebarOpen {
+  @apply translate-x-0;
+}
+
+.sidebar-logo-wrapper {
+  padding: 0.7rem 1.5rem 1rem;
+  height: clamp(100px, 100%, 150px);
+}

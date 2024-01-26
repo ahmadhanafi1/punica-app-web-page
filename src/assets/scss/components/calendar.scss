@@ -1,0 +1,8 @@
+.calendar-navigate{
+  @apply flex items-center min-h-full max-h-full rounded bg-gray-100 p-4 opacity-0 transition-opacity ease-in cursor-pointer;
+
+  &:hover{
+    @apply opacity-100;
+  }
+}
+

@@ -1,0 +1,67 @@
+#weather {grid-column: span 2; @apply hidden lg:block;}
+
+.small__row {
+  display: grid;
+  gap: 10px;
+  grid-column: 1 / -1;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat( auto-fill, minmax(22rem, 1fr) );
+
+  @media (max-width: 1380px) {
+    & > div:nth-child(2), div:nth-child(3) {
+      grid-column: 1 / -1;
+    }
+
+  }
+}
+#columnTwo {
+  grid-column: span 2;
+  & .dashboardWidget{
+    @apply max-w-none;
+  }
+
+  @media (max-width: 768px) {@apply hidden;}
+}
+@media (max-width: 768px) {
+  .small__row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.dashboard__container {
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat( auto-fill, minmax(calc(22rem), 1fr) );
+  justify-content: center;
+  align-items: center;
+}
+
+.my__team {
+  @media (min-width: 1380px) {
+    grid-column: span 1 !important;
+  }
+  @media (min-width: 1742px) {
+    grid-column: span 2 !important;
+  }
+}
+
+.whatsHappenning {
+  grid-row: span 2 !important;
+}
+
+
+.start-last{ 
+  // grid-column-start: 4;
+  @media (min-width: 1380px) {
+    grid-column-start: 3;
+    
+
+  }
+  @media (min-width: 1742px) {
+    grid-column-start: 4;
+    
+
+  }
+}

@@ -1,0 +1,19 @@
+.tab {
+  @apply bg-white p-3;
+  &__wrapper {
+    @apply flex border-b flex-wrap border-[#dee2e6];
+  }
+  &__item {
+    @apply flex relative text-opacity-50 text-[1rem] items-center border border-b-0 rounded-t-md border-[#dee2e6] border-opacity-0 transition ease-linear justify-center text-[#495057]  font-semibold py-3 px-5 cursor-pointer;
+    &:hover {
+      @apply border-opacity-100;
+    }
+    &--active {
+      @apply border-opacity-100 text-opacity-100 text-[#8d0000] border-b-[#fff] bg-[#fff];
+      &:after {
+        @apply absolute bottom-[-2px] left-0 w-full h-1 bg-[#fff];
+        content: '';
+      }
+    }
+  }
+}

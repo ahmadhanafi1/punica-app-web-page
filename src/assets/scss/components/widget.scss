@@ -1,0 +1,330 @@
+//Widget - Block 
+.dashboardWidget {
+  // @apply rounded-2xl bg-white w-full  drop-shadow overflow-hidden text-base;
+  @apply rounded-2xl flex flex-col bg-white w-full  drop-shadow overflow-hidden text-base ;
+ 
+  //Elements 
+  &__header {
+    @apply bg-[#f6f5f5] rounded-t-2xl px-4 py-4 flex items-center justify-center relative;
+
+    &--profile-widget {
+      @apply justify-between;
+    }
+
+    &--vertical {
+      @apply rounded-r-none uppercase font-semibold tracking-wide rounded-l-2xl gap-4;
+    } 
+  }
+
+  &__title {
+    @apply uppercase font-semibold tracking-wide whitespace-nowrap;
+  }
+
+  &__content {
+    @apply p-4;
+
+    &--vertical {
+      @apply relative h-full flex items-center;
+    }
+
+    &--slider {
+      @apply flex h-full w-full flex-col;
+    }
+
+  }
+
+  &__shortcut {
+    @apply flex flex-wrap gap-2 bg-[#F6F5F5] hover:bg-[#d3d3d3] transition-colors  rounded-xl flex items-center justify-center w-[15rem] h-[5rem] px-5 text-xs lg:text-base #{!important};
+  ;
+
+    &--item {
+      @apply bg-[#F6F5F5] hover:bg-[#d3d3d3] p-4 rounded-xl flex items-center justify-center transition-colors lg:w-[100px] h-20 w-full text-xs lg:text-base mx-auto;
+    }
+  }
+
+  &__list {
+    @apply flex flex-col w-full;
+
+    &__label {
+      @apply text-[#505050] ;
+    }
+
+    &__value {
+      @apply text-[#8D8D8D] sm:text-lg;
+    }
+  }
+
+  &__tagListItem {
+    @apply bg-[#F6F5F5] hover:bg-[#d3d3d3] transition-colors px-4 py-2 rounded-xl flex items-center justify-center w-fit h-fit text-xs lg:text-base #{!important};
+  }
+
+  &__slider {
+    @apply rounded-lg w-12 h-12 overflow-hidden #{!important};
+
+    &--btn {
+      @apply absolute top-0 bg-[#f0f0f0] px-1 bg-opacity-70 h-full flex items-center justify-center z-10 transition transition-all delay-200 visible opacity-100;
+
+      &.swiper-button-disabled {
+        @apply invisible opacity-0 transition transition-all delay-200;
+      }
+    }
+
+    &--swiperBtn {
+      @apply z-[90] flex items-center cursor-pointer absolute;
+
+      &--right {
+        @apply right-4;
+      }
+
+      &--left {
+        @apply left-4;
+      }
+    }
+  }
+
+  &__attendance {
+    @apply w-full h-full flex flex-col gap-4;
+
+    &__item__row {
+      @apply flex flex-col;
+
+      &--left {
+        @apply items-start;
+      }
+
+      &--right {
+        @apply items-end;
+      }
+    }
+
+    &__container {
+      @apply flex justify-between;
+
+      &__row {
+        @apply flex flex-col gap-1;
+
+        &--left {
+          @apply items-start;
+        }
+
+        &--right {
+          @apply items-end;
+        }
+      }
+    }
+
+    &__label {
+      @apply text-lg text-black;
+    }
+
+    &__value {
+      @apply text-[#8D8D8D];
+    }
+  }
+
+  //Modifiers
+  &--default {
+    @apply h-[21rem];
+
+    &--slider {
+      @apply flex flex-col
+    }
+
+  }
+
+  &--long {
+     @apply h-fit pb-3 sm:pb-0 sm:h-[42.625rem];
+  }
+
+  &--secondary {
+    &__header {
+      @apply bg-[#E9E9E9];
+    }
+
+    &__content {
+      @apply bg-[#F6F5F5];
+    }
+  }
+
+  &--vertical {
+    @apply h-[162px] overflow-hidden flex flex-col
+  }
+
+  &--vertical-sm {
+    @apply h-[6rem] flex;
+  }
+
+  &--to {
+    @apply hover:text-[#9d0000] cursor-pointer transition-colors transition-opacity hover:opacity-80;
+  }
+
+} 
+
+.lunchWidget {
+  @apply rounded-2xl bg-white w-full h-[6rem] drop-shadow;
+
+  &__container {
+    @apply flex justify-between p-4 items-center h-full;
+  }
+
+  &__row {
+    @apply flex flex-col gap-2;
+
+    &--left {
+      @apply items-start;
+    }
+
+    &--right {
+      @apply items-end;
+    }
+  }
+
+  &__label {
+    @apply text-xl;
+  }
+
+  &__value {
+    @apply text-[#8D8D8D];
+  }
+
+}
+
+.weatherWidget {
+  @apply w-full h-[21rem] bg-white rounded-2xl;
+
+  &__sliderItem {
+    @apply py-10 px-7  flex flex-col justify-between bg-bottom bg-cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://gunsel.punica.app/assets/images/b9-skyblue.jpg');
+  }
+
+  &__name {
+    @apply text-xl md:text-2xl text-white;
+  }
+
+  &__today {
+    @apply w-full h-fit bg-gray-300 py-3 px-6 bg-opacity-70 rounded-2xl flex items-center justify-between;
+
+    &__info {
+      @apply flex flex-col gap-1;
+
+      &--label {
+        @apply text-2xl text-black;
+      }
+
+      &--value {
+        @apply text-sm text-[#505050];
+      }
+    }
+
+    &__status {
+      @apply flex items-center gap-2;
+
+      &--label {
+        @apply text-3xl text-black;
+      }
+    }
+
+  }
+
+  &__days {
+    @apply flex gap-2;
+
+    &__container {
+      @apply w-60 h-20 px-6 py-2 bg-gray-300 bg-opacity-70 flex justify-between items-center rounded-2xl;
+
+      &__info {
+        @apply flex flex-col;
+
+        &--label {
+          @apply text-xl text-black;
+        }
+
+        &--value {
+          @apply text-xl text-black;
+        }
+      }
+
+    }
+  }
+
+  &__loading {
+    @apply bg-cover bg-bottom;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('http://localhost:3000/assets/images/b9-skyblue.jpg');
+  }
+
+  &--weather {
+    @apply w-14;
+
+    & .white {
+      fill: #ffffff;
+    }
+
+    & .gray {
+      fill: rgb(155, 155, 155);
+    }
+
+    & .yellow {
+      fill: #ffeb3b;
+    }
+
+  }
+
+
+  //slider
+  & .swiper-pagination-bullet {
+    @apply bg-[#ccc] opacity-100 #{!important};
+  }
+
+  & .swiper-pagination-bullet-active {
+    @apply bg-[#fff] #{!important};
+  }
+}
+
+.tableWidget {
+  @apply grid overflow-y-auto;
+  @apply gap-2 #{!important};
+
+  &__title {
+    @apply text-lg text-black;
+  }
+
+  &__inner {
+    & > *:nth-child(odd) {
+      @apply bg-gray-50 hover:bg-gray-100 transition-colors #{!important};
+    }
+
+    & > *:nth-child(even) {
+      @apply bg-none hover:bg-gray-100 transition-colors #{!important};
+    }
+
+    &__header {
+      @apply grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] grid-flow-col gap-4 px-4 py-1;
+
+      &__title {
+        @apply text-gray-600;
+      }
+    }
+
+    &__content {
+      @apply grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] grid-flow-col gap-4 px-4 py-1;
+
+      &__value {
+        @apply text-[#8D8D8D];
+      }
+    }
+  }
+
+}
+
+.swiper-custom-pagination {
+  @apply flex justify-center gap-2;
+}
+
+#columnTwo .dashboardWidget .swiper-custom-pagination-myTeam {
+  @apply absolute bottom-4 left-0 flex justify-center #{!important};
+}
+
+.myTeamSlider .swiper-wrapper {
+  @apply items-center;
+}
+

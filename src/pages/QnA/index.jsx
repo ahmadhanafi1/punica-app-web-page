@@ -1,5 +1,6 @@
 import React from 'react'
-import {Form} from "../../components/Form" 
+import {Group, Text, Label, TextArea}  from "../../components/Form" 
+import { Primary } from '../../components/Button'
 
 const index = () => {
 	return (
@@ -17,11 +18,29 @@ const index = () => {
 			
 			</div>
 
-			<div className='w-full h-[40rem]  my-[6rem] bg-gradient-to-b from-[#F3F5F7] to-[#FFFAFA] shadow-2xl rounded-lg flex'>
-				<div className='w-full md:w-1/3'>
-					<Form.Input />
+			<Group className='w-full my-[6rem] bg-gradient-to-b from-[#F3F5F7] to-[#FFFAFA] shadow-2xl rounded-lg  p-[2rem] pb-[3.5rem] '>
+				<div className='flex flex-col md:flex-row gap-0 md:gap-10 w-full h-full'>
+				<div className='w-full md:w-[35%]'>
+						<Label name='' label='title'>
+							<Text />
+						</Label>
+						<Label name='' label='title'>
+							<Text />
+					</Label>
+					<Label name='' label='title'>
+							<Text />
+						</Label>
 				</div>
-			</div>
+				<div className='w-full md:w-[65%]'>
+				<Label name='' label='description'>
+							<span className='h-full'><TextArea /></span>
+						</Label>
+				</div>
+				</div>
+				<div className='w-full flex flex-row-reverse lg:mt-4'>
+					<Primary className="">Send</Primary>
+				</div>
+			</Group>
 		</div>
 	)
 }

@@ -1,0 +1,51 @@
+.moreDropdown {
+  @apply relative inline-block;
+}
+
+.moreDropdown-button {
+  @apply flex items-center lg:justify-center lg:w-full;
+}
+
+.moreDropdown-content {
+  @apply transition-all invisible opacity-0 translate-y-0 group-focus-within:translate-y-3 group-focus-within:visible
+  group-focus-within:opacity-100 duration-200 flex flex-col shadow-lg top-[80%] sm:top-[100%] right-[10%] transform
+  overflow-hidden absolute bg-white z-[99] rounded-lg;
+}
+
+.moreDropdown-content a,
+.moreDropdown-content button,
+.moreDropdown-content p {
+  @apply px-4 py-3 mx-auto hover:bg-gray-100 cursor-pointer whitespace-nowrap w-full;
+}
+
+// MainDropdown
+
+  .dropdown {
+    &__active {@apply opacity-100 translate-y-0 pointer-events-auto;  }
+    @apply absolute w-[250px] max-w-[90vw] opacity-0 pointer-events-none overflow-hidden  h-fit p-3 border-[#edeced] bg-[#f7f4f5] rounded-lg shadow-xl transform translate-y-[20px] transition-all duration-200 ;
+    @media (max-width: 1000px) {&{right: 10px !important;}}
+    &--horizontal {@apply w-[600px];}
+    &--vertical {@apply w-[250px] #{!important};}
+    &__menu {
+    @apply bg-[#f7f4f5];
+    &--horizontal {@apply gap-2 h-fit #{!important};
+      display: grid;grid-template-columns: repeat(2, 1fr);
+      @media (max-width: 768px) {@apply flex flex-col w-fit left-0 #{!important};}
+    }
+    &__sub {
+      @apply transition ease-in-out transform duration-200 ;
+      &--active {@apply translate-x-0 shadow-lg;}
+      &--not-active {@apply translate-x-[100%]}
+    }
+    &__item {
+      @apply flex items-center gap-2 p-1 md:p-2 cursor-pointer w-[250px] hover:bg-[#edeced] rounded-lg;
+      svg {
+        @apply w-6 h-6;
+      }
+      span {
+        @apply text-sm;
+      }
+    }
+  }
+    & > div {@apply absolute top-0 left-0}
+  }

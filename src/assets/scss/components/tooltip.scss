@@ -1,0 +1,9 @@
+.newTooltip {
+  @apply absolute z-50 transition-opacity ease-in-out min-w-fit max-w-[200px] rounded-lg opacity-0 shadow-lg pointer-events-none z-50 px-2 py-1 bg-gray-300 text-gray-500;
+
+  &.active{
+    @apply opacity-100 #{!important};
+    @apply pointer-events-auto;
+  }
+
+}
