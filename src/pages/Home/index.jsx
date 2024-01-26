@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Primary } from '../../components/Button'
-
+import { DownOutlined } from "@ant-design/icons"
 import {useTranslation} from "react-i18next";
 
 const Home = () => {
@@ -62,14 +62,14 @@ const Home = () => {
 			<h5 className=' title-gradient-big leading-[1.15] text-[1.8rem] lg:text-[3rem] font-semibold pb-1 transition-all duration-300  text-center mb-14 px-5'>
 					The Unity in Our Diversity
 			</h5>
-				<div className='w-full max-w-[1400px] flex flex-col md:flex-row mb-20 h-[19rem] overflow-y-visible'>
+				<div className='w-full max-w-[1400px] flex flex-col md:flex-row  h-[19rem] overflow-y-visible mb-[35rem] md:mb-20'>
 					<div className='w-[100%] lg:w-[2000px] lg:h-[400px] my-10 mx-auto -translate-x-[20%]'><img alt='' src={process.env.PUBLIC_URL + "/images/laptop.png"} className='w-full h-full' /></div>
 					<div className='w-full flex flex-col items-end translate-x-2 '>
 						{
 							[0, 1, 2, 3, 4, 5, 6, 7].map((entry, index) => (
-							<div className={`w-[95%] flex flex-col ${curIndex2 === index? "bg-[#8d0000]": "bg-[#ccc]"} my-1 p-2 transition-all duration-300 `} onClick={()=> setCurIndex2(index)}>
-								<h2>Pariatur exercitation non</h2>
-								 <p className={`w-2/3  ${curIndex2 === index? "h-[6rem] my-2" : "h-0"}  overflow-hidden transition-all duration-500`}>
+							<div className={`w-[95%] flex flex-col  ${curIndex2 === index? "bg-[#8d0000]": "bg-[#ccc]"} my-1 p-2 transition-all duration-300 `} onClick={()=> setCurIndex2(index)}>
+								<h2 className={`text-lg items-center flex gap-4 font-semibold ${curIndex2 === index? "text-[#fff]": "text-[#000]"}`}>Pariatur exercitation non <DownOutlined className={`font-extrabold transition-all duration-300 ${curIndex2 === index? "-rotate-90": ""}`} /></h2>
+								 <p className={`w-2/3 text-white text-[.9rem] ${curIndex2 === index? "h-[9rem] lg:h-[7rem] my-2  pt-1" : "h-0"}  overflow-hidden transition-all duration-500`}>
 									Sint eu nulla enim laborum ea exercitation aute commodo consequat qui eu consequat ad.
 									Sit laborum occaecat incididunt labore. Ipsum adipisicing anim ut irure est.
 								</p>

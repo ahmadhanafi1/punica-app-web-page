@@ -64,10 +64,10 @@ const Footer = () => {
 					</Link>
 				</div>
 			</div>
-			<div className='w-full flex items-center justify-between mt-[3rem]'>
+			<div className='w-full flex items-center justify-between mt-[3rem] mb-20'>
 				<img alt='logo' src={process.env.PUBLIC_URL + "/images/punica-logo.png"}
 					className='h-[2rem]' /> 
-				<span className='text-gray-600 text-sm'>©2000-2021, All Rights Reserved</span>
+				<span className='text-gray-600 text-sm '>©2000-2021, All Rights Reserved</span>
 			</div>
 		</div>
 	)

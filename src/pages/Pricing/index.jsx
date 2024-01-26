@@ -26,8 +26,8 @@ const Pricing = () => {
 				<div className='absolute left-0 top-[10%] md:top-0 l w-[600px] md:w-[700px] lg:w-[900px] 2xl:w-[1000px] translate-x-[-67%] xs:translate-x-[-60%] md:translate-x-[-50%] lg:translate-x-[-48%] xl:translate-x-[-40%] 2xl:translate-x-[-25%]'><img alt='' src={ process.env.PUBLIC_URL + "/images/landing1.png"} className='  w-full h-full  z-[-10]' /></div>
 			</div>
 			{/* --------------------------------------------------------------------------------------------------- */}
-			<div className='w-[95%] max-w-[1400px] flex flex-col items-center mx-auto'>
-			<div className='mt-[12rem] w-full mb-[6rem]'>
+			<div className='w-[95%] max-w-[1400px] flex flex-col items-center mx-auto mt-[2rem] lg:mt-[8rem] '>
+			<div className=' w-full mb-[8rem]'>
 				<h5 className=' title-gradient-big leading-[1.15] text-[1.8rem] lg:text-[3rem] font-semibold pb-1 transition-all duration-300 text-center mb-5'>
 					Pricing
 				</h5>
@@ -159,17 +159,17 @@ const Pricing = () => {
 				</div>
 			</div>
 			{/* Table finished */}
-			<div className='w-[95%] max-w-[1400px] flex flex-col md:flex-row justify-center mx-auto gap-16'>
+			<div className='w-[95%] max-w-[1400px] flex flex-col md:flex-row justify-center mx-auto gap-16 mb-[3rem] lg:mb-0'>
 					<img src={process.env.PUBLIC_URL + 'images/landing3.png'} alt="" className='w-full md:w-1/2 ' />
-					<div>
+					<div className=''>
 						<h1
 							className='title-gradient text-center md:text-left text-[1.8rem] lg:text-[2.5rem] font-[500] mb-7'>
 							Create Personal Package
 						</h1>
-						<p className='text-paragText text-center md:text-left text-[.95rem] lg:text-[1.2rem] md:max-w-[25rem]'>
+						<p className='text-paragText mb-10 text-center md:text-left text-[.95rem] lg:text-[1.2rem] md:max-w-[25rem]'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices accumsan elit nec pretium. Phasellus feugiat commodo enim sed viverra.
 						</p>
-						<div className='mx-auto'><Secondary size='small'>Start Adding Features</Secondary></div> 
+						<div className='mx-auto lg:mx-0 w-fit'><Secondary size='small'>Start Adding Features</Secondary></div> 
 					</div>
 			</div>
 		</div>
