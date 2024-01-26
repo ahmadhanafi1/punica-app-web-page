@@ -1,10 +1,9 @@
 //@ts-ignore
 import React from 'react'
 import { DatePicker, ConfigProvider, Typography } from "antd";
-import { useSelector } from "react-redux";
 import { DateInputType } from "../Input/inputType";
 import dayjs from "dayjs";
-import Hint from "../../Hint";
+
 
 const Index = ({
     type = "date",
@@ -22,17 +21,16 @@ const Index = ({
     showTime,
     className
 }: DateInputType) => {
-    // @ts-ignore
-    const appearance = useSelector(state => state.appearance.appearance);
+
 
     return (
         <ConfigProvider theme={{
             token: {
-                colorPrimary: appearance?.primaryColor
+                colorPrimary: "#8d0000"
             },
             components: {
                 Typography: {
-                    colorText: `${appearance?.primaryTextColor} !important`
+                    colorText: `#fff`
                 }
             }
         }}>
@@ -40,7 +38,6 @@ const Index = ({
                 {
                     title ? <div className="flex gap-2">
                         {title ? <Typography.Title level={5}>{title}</Typography.Title> : null}
-                        {hint && title ? <div className="mb-[.5em]"><Hint>{hint}</Hint></div> : null}
                     </div> : null
                 }
                 <DatePicker className={className} placeholder={placeholder} picker={type} allowClear={allowClear}

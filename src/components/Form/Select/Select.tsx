@@ -2,7 +2,6 @@
 import React from 'react'
 import {ConfigProvider, Select as AntSelect, Typography} from "antd";
 import {SelectType} from "./selectTypes";
-import {useSelector} from "react-redux";
 
 const Select = ({
                     onChange,
@@ -22,17 +21,16 @@ const Select = ({
                     className
                 }: SelectType) => {
     //@ts-ignore
-    const appearance = useSelector(state => state.appearance.appearance);
 
     return (
         <ConfigProvider
             theme={{
                 token: {
-                    colorPrimary: appearance?.primaryColor,
-                },
+                colorPrimary: "#8d0000"
+            },
                 components: {
                     Typography: {
-                        colorText: `${appearance?.primaryTextColor} !important`
+                        colorText: `#fff !important`
                     }
                 }
             }}>

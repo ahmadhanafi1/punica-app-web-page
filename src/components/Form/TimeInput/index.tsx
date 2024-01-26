@@ -3,7 +3,6 @@ import React from 'react';
 import {TimePicker, ConfigProvider, Typography} from 'antd';
 import {useSelector} from "react-redux";
 import {TimeInputType} from "./timeInputType";
-import Hint from "../../Hint";
 
 const TimeInput = ({
                        title,
@@ -16,24 +15,21 @@ const TimeInput = ({
                        allowClear = false,
                        value
                    }: TimeInputType) => {
-    // @ts-ignore
-    const appearance = useSelector(state => state.appearance.appearance);
 
     return (
         <ConfigProvider theme={{
             token: {
-                colorPrimary: appearance?.primaryColor
+                colorPrimary: "#8d0000"
             },
             components: {
                 Typography: {
-                    colorText: `${appearance?.primaryTextColor} !important`
+                    colorText: `#fff !important`
                 }
             }
         }}>
             {
                 title ? <div className="flex gap-2">
                         {title ? <Typography.Title level={5}>{title}</Typography.Title> : null}
-                        {hint && title ? <div className="mb-[.5em]"><Hint>{hint}</Hint></div> : null}
                     </div>
                     : null
             }

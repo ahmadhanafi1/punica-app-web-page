@@ -1,9 +1,7 @@
 //@ts-ignore
 import React, {forwardRef, Ref} from 'react'
 import {Input as AntInput, ConfigProvider, Typography} from 'antd'
-import {useSelector} from "react-redux";
 import {InputType} from "./inputType";
-import Hint from "../../Hint";
 
 const PasswordInput = forwardRef(({
                                       disabled = false,
@@ -23,18 +21,16 @@ const PasswordInput = forwardRef(({
                                       hint,
                                       className
                                   }: InputType, ref: Ref<any>) => {
-    // @ts-ignore
-    const appearance = useSelector(state => state.appearance.appearance);
 
 
     return (
         <ConfigProvider theme={{
             token: {
-                colorPrimary: appearance?.primaryColor
+                colorPrimary: "#8d0000"
             },
             components: {
                 Typography: {
-                    colorText: `${appearance?.primaryTextColor} !important`
+                    colorText: `#fff !important`
                 }
             }
         }}>
@@ -42,7 +38,6 @@ const PasswordInput = forwardRef(({
                 {
                     title ? <div className="flex gap-2">
                         {title ? <Typography.Title level={5}>{title}</Typography.Title> : null}
-                        {hint && title ? <div className="mb-[.5em]"><Hint>{hint}</Hint></div> : null}
                     </div> : null
                 }
                 <AntInput.Password disabled={disabled} placeholder={placeholder} prefix={icon} maxLength={maxLength}

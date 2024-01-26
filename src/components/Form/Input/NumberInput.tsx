@@ -1,9 +1,7 @@
 //@ts-ignore
 import React, {forwardRef, Ref} from 'react'
 import {InputNumber, ConfigProvider, Typography} from 'antd'
-import {useSelector} from "react-redux";
 import {NumberInputType} from "./inputType";
-import Hint from "../../Hint";
 
 const NumberInput = forwardRef(({
                                     disabled = false,
@@ -23,17 +21,15 @@ const NumberInput = forwardRef(({
                                     hint,
                                     className
                                 }: NumberInputType, ref: Ref<any>) => {
-    // @ts-ignore
-    const appearance = useSelector(state => state.appearance.appearance);
 
     return (
         <ConfigProvider theme={{
             token: {
-                colorPrimary: appearance?.primaryColor
+                colorPrimary: "#8d0000"
             },
             components: {
                 Typography: {
-                    colorText: `${appearance?.primaryTextColor} !important`
+                    colorText: `#fff !important`
                 }
             }
         }}>
@@ -41,7 +37,6 @@ const NumberInput = forwardRef(({
                 {
                     title ? <div className="flex gap-2">
                         {title ? <Typography.Title level={5}>{title}</Typography.Title> : null}
-                        {hint && title ? <div className="mb-[.5em]"><Hint>{hint}</Hint></div> : null}
                     </div> : null
                 }
                 <InputNumber style={{width: "100%"}} disabled={disabled} ref={ref} placeholder={placeholder}

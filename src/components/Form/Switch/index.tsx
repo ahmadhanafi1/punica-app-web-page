@@ -1,7 +1,6 @@
 //@ts-ignore
 import React from 'react'
 import {Switch as AntSwitch, ConfigProvider} from 'antd'
-import {useSelector} from "react-redux";
 import {SwitchType} from "./switchType";
 import './switch.scss'
 
@@ -16,12 +15,11 @@ const Switch = ({
                     onChange,
                 }: SwitchType) => {
     // @ts-ignore
-    const appearance = useSelector(state => state.appearance.appearance);
 
     return (
         <ConfigProvider theme={{
             token: {
-                colorPrimary: appearance?.primaryColor
+                colorPrimary: "#8d0000"
             }
         }}>
             <AntSwitch id={id} disabled={disabled} loading={loading}
