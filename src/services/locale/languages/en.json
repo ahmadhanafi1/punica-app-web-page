@@ -37,8 +37,8 @@
   "HOME.COLLAPSABLE.SOCIAL_ENGAGEMENT_DESCRIPTION": "You can bring together people with similar interests with tags, organize events with high participation through announcements, and get accurate feedback in a short time with surveys to engage interaction.",
   
 
-  "FOOTER.KICKSTART_CAREER": "Kickstart Your Career Today",
-  "FOOTER.TRY_DEMO": "Try Demo",
+  "FOOTER.KICKSTART_CAREER": "Digitalize Your Business with Punica Today.",
+  "FOOTER.TRY_DEMO": "Try Punica",
   "FOOTER.ABOUT": "About",
   "FOOTER.SUPPORT": "Support",
   "FOOTER.FAQ": "FAQ",
@@ -66,7 +66,7 @@
   "PRICING.MONTH": "Month",
   "PRICING.YEARLY": "Yearly",
   "PRICING.DISCOUNT": "Discount",
-  "PRICING.BUY_NOW": "But Now",
+  "PRICING.BUY_NOW": "Buy Now",
   "PRICING.COMPARE_ALL_FEATURES": "Compare All Features",
   "PRICING.MOST_POPULAR": "Most Popular",
   "PRICING.GALARY.ESSENTIAL": "Pricing",
@@ -84,5 +84,7 @@
   "PRICING.CONTACT_US_TEXT": "Apart from the packages we have determined for you, you can create a package specific to your business by choosing among the features and tools for your needs.",
   "PRICING.CONTACT_US": "Contact Us",
   
+  "FAQ.MAIN_TITLE": "Have a question? Contact us.",
+  "FAQ.MAIN_TEXT": "You can contact us for any questions, suggestions or solutions regarding Punica, which brings the conveniences of the digital world to your business life.",
   "": ""
 }

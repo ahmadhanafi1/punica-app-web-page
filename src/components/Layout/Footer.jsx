@@ -26,7 +26,7 @@ const Footer = () => {
 					<div className=''>
 						<h1 className='font-[500] mb-3'>{t("FOOTER.SUPPORT")}</h1>
 						<div className='flex flex-col gap-3'> 
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.CONTACT_US")}</Link>
+							<Link to="./question" className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.CONTACT_US")}</Link>
 							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.ONLINE_CHAT")}</Link>
 							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.WHATSAPP")}</Link>
 							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.TELEGRAM")}</Link>

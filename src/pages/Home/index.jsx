@@ -60,7 +60,7 @@ const Home = () => {
 			<div className='w-[95%] max-w-[1400px] flex items-center mx-auto relative '>
 
 				<div className='w-1/2 flex flex-col gap-16 mt-16 pb-16 md:pb-32 sm:pl-15'>
-					<h5 className='title-gradient w-full lg:w-[500px] leading-[1.15] text-[1.3rem] md:text-[1.6rem] lg:text-[3rem] xl:text-6xl font-semibold pb-1 transition-all duration-300'>
+					<h5 className='title-gradient font-sans w-full lg:w-[500px] leading-[1.15] text-[1.3rem] md:text-[1.6rem] lg:text-[3rem] xl:text-6xl font-semibold pb-1 transition-all duration-300'>
 						{t("HOME.MAIN_HEADER")}
 					</h5>
 					<p className='text-[#474747] w-full lg:w-[500px]  text-[.8rem] xl:text-[1.1rem]'>
@@ -110,9 +110,9 @@ const Home = () => {
 					<div className='w-full flex flex-col items-end translate-x-2 '>
 						{
 							collapsableData.map((entry, index) => (
-							<div className={`w-[95%] rounded-lg flex flex-col pl-5 ${curIndex2 === index? "bg-[#8d0000]": "bg-[#ccc] cursor-pointer"} my-1 py-3 transition-all duration-500`} onClick={()=> setCurIndex2(curIndex===index? 100000: index)}>
+							<div className={`w-[95%] rounded-lg flex flex-col cursor-pointer pl-5 ${curIndex2 === index? "bg-[#8d0000]": "bg-[#ccc] "} my-1 py-3 transition-all duration-500`} onClick={() => {setCurIndex2(prev => prev === index? null : index)}}>
 								<h2 className={`text-xl items-center flex gap-4 justify-between font-semibold ${curIndex2 === index? "text-[#fff]": "text-[#000]"}`}>{entry?.title} <DownOutlined className={`mt-[.13rem] font-extrabold transition-all mr-5 duration-300 ${curIndex2 === index? "rotate-90": ""}`} /></h2>
-									<p className={`w-2/3 text-white text  ${curIndex2 === index? "max-h-[100rem] transition-[max-height] ease-in duration-[2s] ": "max-h-0 transition-[max-height] overflow-hidden ease-in duration-[.5s] "}
+									<p className={`w-2/3 text-white text  ${curIndex2 === index? "max-h-[100rem] transition-[max-height] ease-in-out duration-[1s] ": "max-h-0 transition-[max-height] overflow-hidden ease-out duration-[.3s] "}
 								 -[.9rem] overflow-hidden my-2 `}>
 									{entry?.description}
 								</p>

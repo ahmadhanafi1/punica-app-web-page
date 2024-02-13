@@ -17,7 +17,7 @@ const Features = () => {
 						The revolutionary solution designed to bring a harmonious and seamless experience to your HR processes.
 					</p>
 					<span className='w-fit lg:mx-0 text-[.7rem]'>
-						<Primary>{t("LANDING.REQUEST_A_DEMO")}</Primary>
+						<Primary>{t("HOME.REQUEST_A_DEMO")}</Primary>
 					</span>
 				</div>
 				<div className='absolute right-0 top-[10%] md:top-0 l w-[600px] md:w-[700px] lg:w-[900px] 2xl:w-[1000px] translate-x-[67%] xs:translate-x-[60%] md:translate-x-[50%] lg:translate-x-[48%] xl:translate-x-[40%] 2xl:translate-x-[25%]'>
@@ -80,7 +80,7 @@ const Features = () => {
 						The revolutionary solution designed to bring a harmonious and seamless experience to your HR processes.
 					</p>
 					<span className='w-fit lg:mx-0 text-[.7rem] hidden md:block'>
-						<Primary>{t("LANDING.REQUEST_A_DEMO")}</Primary>
+						<Primary>{t("HOME.REQUEST_A_DEMO")}</Primary>
 					</span>
 				</div>
 			</div>

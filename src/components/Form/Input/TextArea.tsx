@@ -41,9 +41,9 @@ const TextArea = forwardRef(({
                     </div> : null
                 }
                 <AntInput.TextArea disabled={disabled} placeholder={placeholder} maxLength={maxLength} value={value}
-                                   minLength={minLength} name={name} style={{width: "100%"}} id={id} ref={ref} className={className}
+                                   minLength={minLength} name={name} style={{width: "100%", height:"203px", resize: 'none' }} id={id} ref={ref} className={className}
                                    allowClear={allowClear} defaultValue={defaultValue} showCount={showCount}
-                                   onChange={onChange} onPressEnter={onPressEnter} size={size}/>
+                                   onChange={onChange} onPressEnter={onPressEnter} size={size} />
             </div>
         </ConfigProvider>
     )

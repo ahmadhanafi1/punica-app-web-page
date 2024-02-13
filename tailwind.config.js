@@ -25,7 +25,12 @@ module.exports = {
       'xl' : '1280px',
       '2xl': '1400px',
       "3xl": '1536px',
-    }
+    },
+    fontFamily: {
+      'sans': ['"Plus Jakarta Sans"', 'system-ui'],
+      'serif': ['ui-serif', 'Georgia'],
+      'display': ['Oswald'],
+    },
   },
   
   plugins: [],

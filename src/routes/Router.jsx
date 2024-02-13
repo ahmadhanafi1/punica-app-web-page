@@ -5,7 +5,7 @@ import Error from '../pages/Error';
 import Home from '../pages/Home';
 import Features from '../pages/Features';
 import Pricing from '../pages/Pricing';
-import QnA from '../pages/QnA';
+import FAQ from '../pages/FAQ';
   
 const Router = createBrowserRouter([
 	{
@@ -26,7 +26,7 @@ const Router = createBrowserRouter([
 		},
 		{
 		  path: "/question",
-		  element: <QnA />,
+		  element: <FAQ />,
 		},
 	  ],
 	},
