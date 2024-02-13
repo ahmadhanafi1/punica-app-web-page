@@ -1,54 +1,56 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Secondary } from '../Button'
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
+	const {t} = useTranslation()
 	return (
 		<div className='w-full max-w-[1400px] mx-auto lg:px-28'>
 			<div className='w-[95%] mx-auto p-5 mb-5 flex justify-between bg-primary rounded-lg items-center'>
-				<p className='lg:text-xl text-white'>Kickstart Your Career Today</p>
-				<Secondary >Try Demo</Secondary>
+				<p className='lg:text-xl text-white'>{t("FOOTER.KICKSTART_CAREER")}</p>
+				<Secondary >{t("FOOTER.TRY_DEMO")}</Secondary>
 			</div>
 			<div className='w-full items-center flex justify-between flex-col lg:flex-row mt-10'>
 				<div className='flex gap-5 lg:gap-[4rem]'>
 					<div className=''>
-						<h1 className='font-[500] mb-3'>About</h1>
+						<h1 className='font-[500] mb-3'>{t("FOOTER.ABOUT")}</h1>
 						<div className='flex flex-col gap-3'> 
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>About us</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Blog</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Careers</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Jobs</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>In Press</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.ABOUT_US")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.BLOG")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.Careers")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.JOBS")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.IN_PRESS")}</Link>
 						</div>
 					</div>
 					<div className=''>
-						<h1 className='font-[500] mb-3'>Support</h1>
+						<h1 className='font-[500] mb-3'>{t("FOOTER.SUPPORT")}</h1>
 						<div className='flex flex-col gap-3'> 
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Contact us</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Online Chat</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Whatsapp</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Telegram</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Linked In</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.CONTACT_US")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.ONLINE_CHAT")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.WHATSAPP")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.TELEGRAM")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.TICKETING")}</Link>
 						</div>
 					</div>
 					<div className=''>
-						<h1 className='font-[500] mb-3'>FAQ</h1>
+						<h1 className='font-[500] mb-3'>{t("FOOTER.FAQ")}</h1>
 						<div className='flex flex-col gap-3'> 
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Account</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Manage Deleveries</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Orders</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Payments</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Returns</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.ACCOUNT")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.MANAGE_DELEVERIES")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.ORDERS")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.PAYMENTS")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.RETURNS")}</Link>
 						</div>
 					</div>
 					<div className=''>
-					<h1 className='font-[500] mb-3'>Support</h1>
+					<h1 className='font-[500] mb-3'>{t("FOOTER.SUPPORT")}</h1>
 						<div className='flex flex-col gap-3'> 
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Contact us</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Online Chat</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Whatsapp</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Telegram</Link>
-							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>Linked In</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.CONTACT_US")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.ONLINE_CHAT")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.WHATSAPP")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.TELEGRAM")}</Link>
+							<Link className='text-sm text-[#474747] hover:text-[#999999] w-[4.5rem] transition-all duration-300 '>{t("FOOTER.TICKETING")}</Link>
 						</div>
 					</div>
 				</div>

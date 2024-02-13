@@ -14,13 +14,13 @@ const Pricing = () => {
 
 				<div className='w-1/2 flex flex-col gap-16 mt-16 pb-16 md:pb-32 sm:pr-15 items-end'>
 					<h5 className='title-gradient w-full lg:w-[500px] leading-[1.15] text-[1.3rem] text-right md:text-[1.6rem] lg:text-[3rem] xl:text-6xl font-semibold pb-1 transition-all duration-300'>
-						Manage Your Workforce with Fruitful Harmony
+						{t("PRICING.MAIN_HEADER")}
 					</h5>
 					<p className='text-[#474747] w-full lg:w-[500px] text-right text-[.8rem] xl:text-[1.1rem]'>
-						The revolutionary solution designed to bring a harmonious and seamless experience to your HR processes.
+					{t("PRICING.MAIN_TEXT")}
 					</p>
 					<span className='w-fit lg:mx-0 text-[.7rem]'>
-						<Primary>{t("LANDING.REQUEST_A_DEMO")}</Primary>
+						<Primary>{t("HOME.REQUEST_A_DEMO")}</Primary>
 					</span>
 				</div>
 				<div className='absolute left-0 top-[10%] md:top-0 l w-[600px] md:w-[700px] lg:w-[900px] 2xl:w-[1000px] translate-x-[-67%] xs:translate-x-[-60%] md:translate-x-[-50%] lg:translate-x-[-48%] xl:translate-x-[-40%] 2xl:translate-x-[-25%]'><img alt='' src={ process.env.PUBLIC_URL + "/images/landing1.png"} className='  w-full h-full  z-[-10]' /></div>
@@ -29,19 +29,19 @@ const Pricing = () => {
 			<div className='w-[95%] max-w-[1400px] flex flex-col items-center mx-auto mt-[2rem] lg:mt-[8rem] '>
 			<div className=' w-full mb-[8rem]'>
 				<h5 className=' title-gradient-big leading-[1.15] text-[1.8rem] lg:text-[3rem] font-semibold pb-1 transition-all duration-300 text-center mb-5'>
-					Pricing
+				{t("PRICING")}
 				</h5>
 				<p className='text-[#474747] text-center text-[1.3rem] w-[75%] lg:w-[65%] mx-auto'> 
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices accumsan elit nec pretium. Phasellus feugiat commodo enim sed viverra.
+				{t("PRICING.PUNICA_PRODUCT_OFFERS")}
 				</p>
 				{/* switch */}
 				<div className='relative w-[15rem] border-[3px] border-primary rounded-3xl h-[3rem] mx-auto mt-[3rem] flex overflow-clip'>
 					<p
 						onClick={() => setMonthlyYearlySwitch("monthly")}
-						className={`w-1/2 h-full flex justify-center items-center  cursor-pointer transition-all duration-500 text-sm ${monthlyYearlySwitch === "monthly" ? 'text-[#fff]' : ""}`}>Monthly</p>
+						className={`w-1/2 h-full flex justify-center items-center  cursor-pointer transition-all duration-500 text-sm ${monthlyYearlySwitch === "monthly" ? 'text-[#fff]' : ""}`}>{t("PRICING.MONTHLY")}</p>
 					<p
 						onClick={() => setMonthlyYearlySwitch("yearly")}
-						className={`w-1/2 h-full flex justify-center items-center  cursor-pointer transition-all duration-500 text-sm ${monthlyYearlySwitch === "yearly" ? 'text-[#fff]' : ""}`}>Yearly</p>
+						className={`w-1/2 h-full flex justify-center items-center  cursor-pointer transition-all duration-500 text-sm ${monthlyYearlySwitch === "yearly" ? 'text-[#fff]' : ""}`}>{t("PRICING.YEARLY")}</p>
 					<div className={`absolute w-1/2 h-[100%] bg-primary top-[0%] left-[0%] z-[-10] transition-all duration-300
 					${monthlyYearlySwitch === "yearly" ? 'translate-x-[100%]' : ""}`}></div>
 				</div>
@@ -50,11 +50,11 @@ const Pricing = () => {
 			{/* prices */}
 			<div className='w-[80%] flex gap-0 mb-[10rem]'>
 				<div className='w-1/3 text-[#333333] pricing-gradient h-[25rem] hidden md:flex flex-col p-5 pt-[3rem] items-center pr-14 '>
-						<h1 className='title-gradient-big text-[2.5rem] font-[500]'>Essential</h1>
+						<h1 className='title-gradient-big text-[2.5rem] font-[500]'>{t("PRICING.ESSENTIAL").toUpperCase()}</h1>
 						<p className=''>
 							EURO €
 							<span className='price-text-gradient text-[4rem] font-[500] px-3'>3.99</span>
-							/month
+							/{t("PRICING.MONTH")}
 						</p>
 						{/* description */}
 						<div className='text-center flex flex-col gap-3 mt-4 font-[300]'>
@@ -67,11 +67,11 @@ const Pricing = () => {
 				</div>
 				<div className='relative flex flex-col items-center w-full md:w-1/3 pricing-gradient pt-[2.5rem] pricing-shadow border z-50 scale-[1.15] rounded-md md:rounded-[0]'>
 				<div className='w-1/2 rounded-3xl absolute top-[-5.5%] bg-primary text-white py-3 text-center most-popular-shadow'>Most Popular</div>
-				<h1 className='title-gradient-big text-[2.5rem] font-[500]'>Essential</h1>
+				<h1 className='title-gradient-big text-[2.5rem] font-[500]'>{t("PRICING.BUSINESS_PRO").toUpperCase()}</h1>
 						<p className=''>
 							EURO €
 							<span className='price-text-gradient text-[4rem] font-[500] px-3'>3.99</span>
-							/month
+							/{t("PRICING.MONTH")}
 						</p>
 						{/* description */}
 						<div className='text-center flex flex-col gap-3 mt-4 font-[300]'>
@@ -83,11 +83,11 @@ const Pricing = () => {
 						</div>
 				</div>
 				<div className='w-1/3 text-[#333333] pricing-gradient hidden md:flex flex-col  py-[3rem] items-center pl-14 pr-5 '>
-						<h1 className='title-gradient-big text-[2.5rem] font-[500]'>Essential</h1>
+						<h1 className='title-gradient-big text-[2.5rem] font-[500]'>{t("PRICING.PREMIUM").toUpperCase()}</h1>
 						<p className=''>
 							EURO €
 							<span className='price-text-gradient text-[4rem] font-[500] px-3'>3.99</span>
-							/month
+							/{t("PRICING.MONTH")}
 						</p>
 						{/* description */}
 						<div className='text-center flex flex-col gap-3 mt-4 font-[300]'>
@@ -105,41 +105,41 @@ const Pricing = () => {
 			</div>
 			<div className='w-[95%] max-w-[1400px]  flex-col items-center mx-auto flex'>
 				<h5 className=' title-gradient-big leading-[1.15] text-[1.8rem] lg:text-[2.5rem] font-semibold pb-1 transition-all duration-300 text-center mb-5'>
-					Lorem Ipsum Dolor!
+				{t("PRICING.DIFFERENT_PACKAGES_FOR_DIFFERENT_NEEDS")}
 				</h5>
 				<p className='text-[#474747] text-center text-[.95rem] lg:text-[1.2rem] w-[75%]  mx-auto'> 
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-				</p>
-				<span className='my-[2.6rem]'><Primary >EXPLORE ALL FEATURES</Primary></span>
+						{t("PRICING.DIFFERENT_PACKAGES_FOR_DIFFERENT_NEEDS_TEXT")}
+			</p>
+				<span className='my-[2.6rem]'><Primary >{t("PRICING.EXPLORE_ALL_FEATURES")}</Primary></span>
 
 				<div className='w-full bg-[#F3F5F7] border-2 border-primary rounded-lg mb-[10rem] pb-5 hidden md:block '>
 					<div className='bg-primary  m-5 flex text-white rounded-lg font-[600]'>
-						<span className='w-[30%] py-3 pl-6'>FEATURE</span>
+						<span className='w-[30%] py-3 pl-6'>{t("PRICING.FEATURE")}</span>
 						<div className='flex w-[70%] justify-center items-center text-center'>
-							<span className='w-1/3 py-3'>ESSENTIAL</span>
-							<span className='w-1/3 py-3'>BUSINESS PRO</span>
-							<span className='w-1/3 py-3'>PREMIUM</span>
+							<span className='w-1/3 py-3'>{t("PRICING.ESSENTIAL").toUpperCase()}</span>
+							<span className='w-1/3 py-3'>{t("PRICING.BUSINESS_PRO").toUpperCase()}</span>
+							<span className='w-1/3 py-3'>{t("PRICING.PREMIUM").toUpperCase()}</span>
 						</div>
 					</div>
 					<div className='mx-5 mb-1 rounded-lg flex '>
-							<span className='w-[30%] py-3 pl-6'>Price</span>
+							<span className='w-[30%] py-3 pl-6'>{t("PRICING.PRICE").toUpperCase()}</span>
 							<div className='flex w-[70%] justify-center items-center text-center'>
 							<span className='w-1/3 py-3'><p className='text-[.75rem] lg:text-sm'>
 								EURO €
 								<span className='price-text-gradient text-[1.5rem] font-[500] px-2 lg:px-3'>3.99</span>
-								/month
+								/{t("PRICING.MONTH")}
 							</p>
 							</span>
 							<span className='w-1/3 py-3'><p className='text-[.75rem] lg:text-sm'>
 								EURO €
 								<span className='price-text-gradient text-[1.5rem] font-[500] px-2 lg:px-3'>3.99</span>
-								/month
+								/{t("PRICING.MONTH")}
 							</p>
 							</span>
 							<span className='w-1/3 py-3'><p className='text-[.75rem] lg:text-sm'>
 								EURO €
 								<span className='price-text-gradient text-[1.5rem] font-[500] px-2 lg:px-3'>3.99</span>
-								/month
+								/{t("PRICING.MONTH")}
 							</p>
 							</span>
 						</div>
@@ -164,12 +164,12 @@ const Pricing = () => {
 					<div className=''>
 						<h1
 							className='title-gradient text-center md:text-left text-[1.8rem] lg:text-[2.5rem] font-[500] mb-7'>
-							Create Personal Package
+						{t("PRICING.CONTACT_US_MAIN")}
 						</h1>
 						<p className='text-paragText mb-10 text-center md:text-left text-[.95rem] lg:text-[1.2rem] md:max-w-[25rem]'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices accumsan elit nec pretium. Phasellus feugiat commodo enim sed viverra.
+						{t("PRICING.CONTACT_US_TEXT")}
 						</p>
-						<div className='mx-auto lg:mx-0 w-fit'><Secondary size='small'>Start Adding Features</Secondary></div> 
+						<div className='mx-auto lg:mx-0 w-fit'><Secondary size='small'>{t("PRICING.CONTACT_US")}</Secondary></div> 
 					</div>
 			</div>
 		</div>

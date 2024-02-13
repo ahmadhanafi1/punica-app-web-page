@@ -1,3 +1,7 @@
 {
-  "LANDING.REQUEST_A_DEMO": "Request a Demo"
+  "NAVBAR.REQUEST_A_DEMO": "Request a Demo",
+  "NAVBAR.PRODUCTS": "Products",
+  "NAVBAR.PRICING": "Pricing",
+  "NAVBAR.FEATURES": "Features"
+  
 }
