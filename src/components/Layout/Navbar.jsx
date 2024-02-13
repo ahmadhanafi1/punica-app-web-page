@@ -30,15 +30,19 @@ const Navbar = () => {
 
 <div className=' w-20 h-10 rounded-lg flex items-center justify-center text-center m-4 border border-primary overflow-hidden cursor-pointer relative top-0'>
 				<div className={`w-1/2 h-full absolute bg-primary z-[-1] transition-all duration-200 ${langSwitch === "en"? "left-0" : "left-1/2"}`}></div>
-				<p className={`w-1/2 transition-all duration-200 ${langSwitch === "en"? "text-white" : ""}`} onClick={() => { 
-					setLangSwitch("en")
-					setLanguage("en")
+				<p className={`w-1/2  ${langSwitch === "en"? "text-white" : ""}`} onClick={() => { 
+					if (langSwitch !== "en") {
+						setLangSwitch("en")
+						setLanguage("en")
+					}
 				}}>
 					EN
 				</p>
 				<p className={`w-1/2 transition-all duration-200 ${langSwitch === "tr"? "text-white" : ""}`} onClick={() => { 
-					setLangSwitch("tr")
-					setLanguage("tr")
+					if (langSwitch !== "tr") {	
+						setLangSwitch("tr")
+						setLanguage("tr")
+					}
 				}}>
 					TR
 				</p>
@@ -46,9 +50,9 @@ const Navbar = () => {
 				{/* For Laptop version */}
 			<div className='hidden lg:flex items-center justify-end gap-[2rem] lg:gap-[5rem] w-[80%] lg:pr-10 '>
 				<div className=' gap-4 lg:gap-12 flex-wrap flex'>
-					<NavLink to={'/'} className='text-[#474747] hover:text-[#999999] w-fit lg:text-[1.2rem] transition-all duration-300 truncate'>{t("NAVBAR.PRODUCTS")}</NavLink>
-					<NavLink to={'/pricing'} className='text-[#474747] hover:text-[#999999] w-fit lg:text-[1.2rem] transition-all duration-300 truncate'>{t("NAVBAR.PRICING")}</NavLink>
-					<NavLink to={'/features'} className='text-[#474747] hover:text-[#999999] w-fit lg:text-[1.2rem] transition-all duration-300 truncate'>{t("NAVBAR.FEATURES")}</NavLink>
+					<NavLink to={'/'} style={{}} className={({isActive}) => `${isActive? "text-primary font-600" : "hover:text-[#999999]"} text-[#474747]  w-fit lg:text-[1.2rem] transition-all duration-300 truncate`}>{t("NAVBAR.PRODUCTS")}</NavLink>
+					<NavLink to={'/pricing'} className={({isActive}) => `${isActive? "text-primary font-600" : "hover:text-[#999999] "} text-[#474747] w-fit lg:text-[1.2rem] transition-all duration-300 truncate`}>{t("NAVBAR.PRICING")}</NavLink>
+					<NavLink to={'/features'} className={({isActive}) => `${isActive? "text-primary font-600" : "hover:text-[#999999] "} text-[#474747] w-fit lg:text-[1.2rem] transition-all duration-300 truncate`}>{t("NAVBAR.FEATURES")}</NavLink>
 				</div>
 				<Primary>{t("NAVBAR.REQUEST_A_DEMO")}</Primary>
 			</div>

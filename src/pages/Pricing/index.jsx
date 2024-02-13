@@ -35,7 +35,10 @@ const Pricing = () => {
 				{t("PRICING.PUNICA_PRODUCT_OFFERS")}
 				</p>
 				{/* switch */}
+				<div className='relative w-fit mx-auto'>
+				{/* <div className='w-32 h-20 bg-gray-300 absolute right-[-65%] bottom-[-38%] after:w-0 after:h-0 after:border-y-transparent after:border-y-[20px] after:border-l-gray-900 after:border-l-[20x] after:absolute after:top-0 after:z-[1000]'></div> */}
 				<div className='relative w-[15rem] border-[3px] border-primary rounded-3xl h-[3rem] mx-auto mt-[3rem] flex overflow-clip'>
+				
 					<p
 						onClick={() => setMonthlyYearlySwitch("monthly")}
 						className={`w-1/2 h-full flex justify-center items-center  cursor-pointer transition-all duration-500 text-sm ${monthlyYearlySwitch === "monthly" ? 'text-[#fff]' : ""}`}>{t("PRICING.MONTHLY")}</p>
@@ -46,18 +49,19 @@ const Pricing = () => {
 					${monthlyYearlySwitch === "yearly" ? 'translate-x-[100%]' : ""}`}></div>
 				</div>
 			</div>
+			</div>
 			{/* switch over */}
 			{/* prices */}
-			<div className='w-[80%] flex gap-0 mb-[10rem]'>
+			<div className='w-[80%] md:w-[95%] lg:w-[80%] flex gap-0 mb-[10rem]'>
 				<div className='w-1/3 text-[#333333] pricing-gradient h-[25rem] hidden md:flex flex-col p-5 pt-[3rem] items-center pr-14 '>
-						<h1 className='title-gradient-big text-[2.5rem] font-[500]'>{t("PRICING.ESSENTIAL").toUpperCase()}</h1>
-						<p className=''>
+				<h1 className='title-gradient-big text-[1rem] lg:text-[1.7rem] font-[500]'>{t("PRICING.ESSENTIAL").toUpperCase()}</h1>
+						<p className='text-sm mt-2'>
 							EURO €
-							<span className='price-text-gradient text-[4rem] font-[500] px-3'>3.99</span>
+							<span className='price-text-gradient text-[1.5rem] lg:text-[2.5rem] font-[500] px-1 lg:px-3 '>3.99</span>
 							/{t("PRICING.MONTH")}
 						</p>
 						{/* description */}
-						<div className='text-center flex flex-col gap-3 mt-4 font-[300]'>
+						<div className='text-center flex flex-col gap-3 mt-4 font-[300] text-[.5rem] lg:text-sm'>
 							<p>Recommended for starters</p>
 							<p>Core</p>
 							<p>Lorem ipsum dorum nigadom abra kadab</p>
@@ -67,14 +71,14 @@ const Pricing = () => {
 				</div>
 				<div className='relative flex flex-col items-center w-full md:w-1/3 pricing-gradient pt-[2.5rem] pricing-shadow border z-50 scale-[1.15] rounded-md md:rounded-[0]'>
 				<div className='w-1/2 rounded-3xl absolute top-[-5.5%] bg-primary text-white py-3 text-center most-popular-shadow'>Most Popular</div>
-				<h1 className='title-gradient-big text-[2.5rem] font-[500]'>{t("PRICING.BUSINESS_PRO").toUpperCase()}</h1>
-						<p className=''>
+				<h1 className='title-gradient-big text-[1rem] lg:text-[1.7rem] font-[500]'>{t("PRICING.BUSINESS_PRO").toUpperCase()}</h1>
+						<p className='text-sm mt-2'>
 							EURO €
-							<span className='price-text-gradient text-[4rem] font-[500] px-3'>3.99</span>
+							<span className='price-text-gradient text-[1.5rem] lg:text-[2.5rem] font-[500] px-1 lg:px-3 '>7.99</span>
 							/{t("PRICING.MONTH")}
 						</p>
 						{/* description */}
-						<div className='text-center flex flex-col gap-3 mt-4 font-[300]'>
+						<div className='text-center flex flex-col gap-3 mt-4 font-[300] text-[.5rem] lg:text-sm'>
 							<p>Recommended for starters</p>
 							<p>Core</p>
 							<p>Lorem ipsum dorum nigadom abra kadab</p>
@@ -83,14 +87,14 @@ const Pricing = () => {
 						</div>
 				</div>
 				<div className='w-1/3 text-[#333333] pricing-gradient hidden md:flex flex-col  py-[3rem] items-center pl-14 pr-5 '>
-						<h1 className='title-gradient-big text-[2.5rem] font-[500]'>{t("PRICING.PREMIUM").toUpperCase()}</h1>
-						<p className=''>
+						<h1 className='title-gradient-big text-[1.7rem] font-[500]'>{t("PRICING.PREMIUM").toUpperCase()}</h1>
+						<p className='text-sm lg:text-base mt-2'>
 							EURO €
-							<span className='price-text-gradient text-[4rem] font-[500] px-3'>3.99</span>
+							<span className='price-text-gradient text-[1.5rem] lg:text-[2.5rem] font-[500] px-1 lg:px-3'>19.99</span>
 							/{t("PRICING.MONTH")}
 						</p>
 						{/* description */}
-						<div className='text-center flex flex-col gap-3 mt-4 font-[300]'>
+						<div className='text-center flex flex-col gap-3 mt-4 font-[300] text-[.5rem] lg:text-sm'>
 							<p>Recommended for starters</p>
 							<p>Core</p>
 							<p>Lorem ipsum dorum nigadom abra kadab</p>
